@@ -1,0 +1,41 @@
+<mappings xmlns="http://dozer.sourceforge.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://dozer.sourceforge.net  http://dozer.sourceforge.net/schema/beanmapping.xsd">
+  
+  <!-- By default, wildcard is true. It tells the Dozer engine that we want all fields in the source object to be mapped to their
+  appropriate destination fields.
+
+  When we set it to false, we are telling Dozer to only map fields we have explicitly specified in the XML
+   -->
+  
+  <mapping wildcard="false">
+    <class-a>com.ups.service.Employee</class-a>
+    <class-b map-null="false">com.ups.model.EmployeeModel</class-b>
+    
+    <field>
+      <a>firstName</a>
+      <b>fName</b>
+    </field>
+    
+    <field>
+      <a>id</a>
+      <b>idd</b>
+    </field>
+    
+    <field>
+      <a>lastName</a>
+      <b>lName</b>
+    </field>
+    
+    
+    <field>
+      <a>department.id</a>
+      <b>department.did</b>
+    </field>
+    
+    <field>
+      <a>department.name</a>
+      <b>department.dname</b>
+    </field>
+    
+  </mapping>
+</mappings>
